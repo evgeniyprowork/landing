@@ -1,5 +1,6 @@
 .idea/
 build
-nodu_modules
 npm-debag.log
 .DS_Store
+/my/
+/node_modules/
