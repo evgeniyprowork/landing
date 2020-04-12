@@ -1,0 +1,7 @@
+nav.nav
+	-var menuLinks = ['home', 'about us', 'our approch', 'our work'];
+	each item, index in menuLinks
+		if index === 0
+			a.nav_link.nav_link--active(href="#")=item
+		else
+			a.nav_link(href="#")=item

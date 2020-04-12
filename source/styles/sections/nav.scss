@@ -1,0 +1,40 @@
+.nav {
+	display: inline-block;
+	vertical-align: top;
+	margin-right: 15px;
+
+	&_link {
+		position: relative;
+		display: inline-block;
+		padding-right: 38px;
+		vertical-align: top;
+		font-family: $ff-main-bold;
+		color: #424242;
+		text-decoration: none;
+		text-transform: capitalize;
+
+		&:hover,
+		&--active {
+			color: #e34a44;
+		}
+
+		&:after {
+			content: '';
+			//display: inline-block;
+			//vertical-align: middle;
+			position: absolute;
+			top: 50%;
+			right: 19px;
+			transform: translate(50%, -50%);
+			width: 5px;
+			height: 5px;
+			//margin-left: 19px;
+			background-color: #424242;
+			border-radius: 50%;
+		}
+
+		&:last-child:after {
+			display: none;
+		}
+	}
+}

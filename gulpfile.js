@@ -26,8 +26,7 @@ gulp.task('browser-sync', function() {
 gulp.task('templates:compile', function buildHTML() {
 	return gulp.src('source/template/index.pug')
 		.pipe(pug({
-			// Your options in here.
-			//pretty: true
+			pretty: true
 		}))
 		.pipe(gulp.dest('build'))
 });

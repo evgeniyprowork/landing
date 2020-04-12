@@ -1,5 +1,3 @@
-# Курс верстки лендинга для образовательного канала ITVDN
-
 ## Перед стартом проекта необходимо:
 
 * Убедиться что уставновленный node.js и npm. Для этого достаточно написать в терминале
@@ -27,11 +25,11 @@ packege.json, а также все их зависимости
 ## Hot command
 1. Git
 - git status
-- git add
+- git add (git add .)
 - git commit -m "some comment"
-- git push
-- git branch => проверка на какой ветке, (git branch geka-1 => создаст новую ветку geka-1)
-- git checkout (git checkout geka-1 => переключится на ветку geka-1)
+- git push (git push origin lesson-1)
+- git branch => проверка на какой ветке, (git branch lesson-1 => создаст новую ветку lesson-1)
+- git checkout (git checkout lesson-1 => переключится на ветку lesson-1)
 - git merge
 
 2. Gulp
