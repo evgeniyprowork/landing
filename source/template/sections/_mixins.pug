@@ -1,0 +1,10 @@
+mixin title_wrap(title, text, line)
+	.container
+		if line !== 'line'
+			.title_wrap
+				h2.title.title_header=title
+				.title_text=text
+		else
+			.title_wrap.title_wrap--line
+				h2.title.title_header=title
+				.title_text=text

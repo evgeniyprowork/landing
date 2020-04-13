@@ -1,6 +1,7 @@
 .about {
 	padding: 102px 0 119px 0;
 	text-align: center;
+	background: #fff;
 
 	&_list {
 		display: flex;
@@ -10,6 +11,7 @@
 		margin-bottom: -30px;
 		padding: 0 51px;
 	}
+
 
 	&_item {
 		flex-basis: 245px;
