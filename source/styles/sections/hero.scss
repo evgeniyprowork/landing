@@ -1,0 +1,25 @@
+.hero {
+	display: flex;
+	height: 590px;
+	min-height: 59px;
+	padding: 10px;
+	color: #fff;
+	background: #304747 url("../images/hero-bg.jpg") center/cover no-repeat;
+
+	&_content {
+		margin: auto;
+		text-align: center;
+	}
+
+	&_text {
+		font-family: $ff-main-bold;
+		font-size: 40px;
+	}
+
+	&_title {
+		margin: 0 0 32px;
+		font-family: $ff-main-light;
+		font-size: 26px;
+	}
+}
+

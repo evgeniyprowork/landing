@@ -1,0 +1,34 @@
+.about {
+	padding: 102px 0 119px 0;
+	text-align: center;
+
+	&_list {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-around;
+		margin-left: -20px;
+		margin-bottom: -30px;
+		padding: 0 51px;
+	}
+
+	&_item {
+		flex-basis: 245px;
+		padding-left: 20px;
+		padding-bottom: 30px;
+	}
+
+	&_header {
+		margin-bottom: 14px;
+		font-family: $ff-main-bold;
+		font-size: 22px;
+		color: #424242;
+	}
+
+	&_desc {
+		font-family: "Open Sans";
+		font-size: 14px;
+		font-weight: 400;
+		color: #5b5b5b;
+		line-height: 22px;
+	}
+}

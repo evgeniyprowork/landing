@@ -1,0 +1,28 @@
+.title_wrap {
+	margin-bottom: 64px;
+
+	&--line {
+		position: relative;
+
+		&:after {
+			@include centerer-x;
+
+			content: '';
+			bottom: -14px;
+			width: 47px;
+			height: 5px;
+			background-color: #424242;
+		}
+	}
+
+	.title_header {
+		font-family: $ff-main-bold;
+		font-size: 36px;
+		color: #424242;
+	}
+
+	.title_text {
+		font-family: $ff-main-light;
+		font-size: 20px;
+	}
+}
