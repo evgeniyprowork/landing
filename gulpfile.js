@@ -4,7 +4,11 @@ const pug = require('gulp-pug');
 const sass = require('gulp-sass');
 const spritesmith = require('gulp.spritesmith');
 const rimraf = require('rimraf');
-const rename = require("gulp-rename");
+const rename = require('gulp-rename');
+// const uglify = require('gulp-uglify');
+const terser = require('gulp-terser');
+const concat = require('gulp-concat');
+const sourcemaps = require('gulp-sourcemaps');
 
 //sass.compiler = require('node-sass');
 
@@ -37,6 +41,20 @@ gulp.task('sass:compile', function () {
 		.pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
 		.pipe(rename("main.min.css")) // rename => переименует название файла
 		.pipe(gulp.dest('build/css'));
+});
+
+/* ------------ JS ------------- */
+gulp.task('js', function () {
+	return gulp.src([
+		'source/js/form.js',
+		'source/js/navigation.js',
+		'source/js/main.js'
+	])
+		.pipe(sourcemaps.init())
+		.pipe(concat('main.min.js'))
+		.pipe(terser())
+		.pipe(sourcemaps.write())
+		.pipe(gulp.dest('build/js'));
 });
 
 /* ------------ Sprite ------------- */
@@ -76,11 +94,12 @@ gulp.task('copy', gulp.parallel('copy:fonts', 'copy:images'));
 gulp.task('watch', function() {
 	gulp.watch('source/template/**/*.pug', gulp.series('templates:compile'));
 	gulp.watch('source/styles/**/*.scss', gulp.series('sass:compile'));
+	gulp.watch('source/js/**/*.js', gulp.series('js'));
 });
 
 gulp.task('default', gulp.series(
 	'clean',
-	gulp.parallel('templates:compile', 'sass:compile', 'sprite', 'copy'),
+	gulp.parallel('templates:compile', 'sass:compile', 'js','sprite', 'copy'),
 	gulp.parallel('watch', 'browser-sync')
 	)
 );

@@ -1,4 +1,5 @@
 .header {
+	position: relative;
 
 	&_top {
 		background-color: #f0f2f4;
@@ -10,17 +11,35 @@
 		flex-wrap: wrap;
 		justify-content: space-between;
 		align-items: center;
-		height: 131px;
+		height: 130px;
+
+		@media (max-width: 631px) {
+			flex-direction: column;
+			flex-wrap: nowrap;
+			padding-top: 20px;
+			padding-bottom: 35px;
+		}
+
+		.button {
+			@media (max-width: 863px) {
+				display: block;
+				margin: 0 auto;
+			}
+		}
 	}
 }
 
 .contacts {
 	text-align: right;
+
+	@media (max-width: 631px) {
+		text-align: center;
+	}
 }
 
 .contact {
 	display: inline-block;
-	padding: 10px 10px 8px;
+	padding: 9px 0 8px 12px;
 	vertical-align: middle;
 	color: #424242;
 
@@ -46,8 +65,8 @@
 
 .facebook_i {
 	display: inline-block;
-	margin: 7px 0 9px 12px;
-	padding: 5px 9px;
+	margin: 7px 0 0 12px;
+	padding: 3px 9px;
 	background-color: #1287bf;
 	color: #fff;
 	border-radius: 3px;

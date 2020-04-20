@@ -1,6 +1,10 @@
 .form_section {
-	padding: 99px 0 111px 0;
+	padding: 91px 0 111px 0;
 	background-color: #1287bf;
+
+	@media (max-width: 768px) {
+		padding: 61px 0 81px 0;
+	}
 
 	.title_wrap  {
 		margin-bottom: 18px;
@@ -11,9 +15,9 @@
 
 	.btn_down {
 		position: relative;
-		width: 64px;
-		height: 64px;
-		margin: 0 auto 29px;
+		width: 56px;
+		height: 56px;
+		margin: 0 auto 19px;
 		border: 3px solid #ffffff;
 		border-radius: 50%;
 
@@ -29,10 +33,22 @@
 
 .form {
 	position: relative;
-	padding: 52px 61px 85px 68px;
+	width: 67%;
+	margin: 0 auto;
+	padding: 46px 56px 68px 44px;
 	text-align: center;
 	background-color: #fff;
 	border-radius: 3px;
+	box-sizing: border-box;
+
+	@media (max-width: 768px) {
+		width: 80%;
+		padding-bottom: 45px;
+	}
+	@media (max-width: 550px) {
+		width: 100%;
+		padding: 36px 30px 35px 30px;
+	}
 
 	&:before {
 		@include centerer-x;
@@ -70,7 +86,7 @@
 	}
 
 	&_text {
-		padding-bottom: 39px;
+		padding-bottom: 35px;
 		font-size: 15px;
 		line-height: 1.47;
 		color: #828282;
@@ -81,13 +97,17 @@
 		flex-direction: column;
 		width: 76%;
 		margin: 0 auto;
-		padding-bottom: 37px;
+		padding-bottom: 26px;
+
+		@media (max-width: 768px) {
+			width: 100%;
+		}
 	}
 
 	&_input {
 		display: block;
 		height: 50px;
-		margin-bottom: 10px;
+		margin-bottom: 11px;
 		padding-left: 20px;
 		border: 1px solid #d8d8d8;
 		background-color: #f1f1f1;
@@ -100,5 +120,17 @@
 			font-size: 14px;
 			color: #b0b0b0;
 		}
+	}
+
+	.button {
+		padding: 14px 33px;
+		font-size: 15px;
+		font-size: 15px;
+	}
+}
+
+.form2 {
+	input:focus, textarea:focus{
+		background-color: lightyellow;
 	}
 }

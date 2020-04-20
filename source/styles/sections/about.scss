@@ -1,7 +1,10 @@
 .about {
-	padding: 102px 0 119px 0;
-	//text-align: center;
+	padding: 94px 0 114px 0;
 	background: #fff;
+
+	@media (max-width: 768px) {
+		padding: 60px 0 80px 0;
+	}
 
 	&_list {
 		display: flex;
@@ -10,6 +13,10 @@
 		margin-left: -20px;
 		margin-bottom: -30px;
 		padding: 0 51px;
+
+		@media (max-width: 641px) {
+			padding: 0;
+		}
 	}
 
 
@@ -17,10 +24,14 @@
 		flex-basis: 245px;
 		padding-left: 20px;
 		padding-bottom: 30px;
+
+		@media (max-width: 641px) {
+			flex-basis: 100%;
+		}
 	}
 
 	&_header {
-		margin-bottom: 14px;
+		margin-bottom: 7px;
 		font-family: $ff-main-bold;
 		font-size: 22px;
 		color: #424242;

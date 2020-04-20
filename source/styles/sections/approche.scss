@@ -1,6 +1,10 @@
 .approche {
-	padding: 90px 0 133px 0;
+	padding: 83px 0 99px 0;
 	background-color: #f3f3f3;
+
+	@media (max-width: 768px) {
+		padding: 53px 0 50px 0;
+	}
 
 	&_list {
 		counter-reset: count;
@@ -8,8 +12,13 @@
 
 	&_item {
 		display: flex;
-		margin-bottom: 40px;
+		margin-bottom: 38px;
+		background-color: #fff;
 		box-shadow: 0 0 5px #e2e2e2;
+
+		@media (max-width: 670px) {
+
+		}
 
 		&:nth-child(2n) {
 			flex-direction: row-reverse;
@@ -23,6 +32,14 @@
 			.approche_text {
 				padding-right: 90px;
 				padding-left: 72px;
+
+				@media (max-width: 768px) {
+					padding-left: 52px;
+				}
+
+				@media (max-width: 700px) {
+					padding: 36px 52px 36px 32px;
+				}
 			}
 		}
 	}
@@ -38,6 +55,10 @@
 		display: block;
 		width: 100%;
 		height: 100%;
+
+		@media (max-width: 600px) {
+			display: none;
+		}
 	}
 
 	&_step {
@@ -62,19 +83,33 @@
 			counter-increment: count;
 			display: block;
 			font-family: $ff-steps;
-			font-size: 60px;
+			font-size: 50px;
 			line-height: 1;
+		}
+
+		@media (max-width: 700px) {
+			display: none;
 		}
 	}
 
 	&_text {
-		width: 64%;
-		padding: 71px 72px 65px 90px;
+		width: 51%;
+		padding: 66px 72px 66px 92px;
 		background-color: #ffffff;
+
+		@media (max-width: 768px) {
+			padding-right: 52px;
+		}
+		@media (max-width: 700px) {
+			padding: 36px 32px 36px 52px;
+		}
+		@media (max-width: 600px) {
+			width: 100%;
+		}
 	}
 
 	&_title {
-		padding-bottom: 14px;
+		padding-bottom: 8px;
 		font-family: $ff-main-bold;
 		font-size: 18px;
 		color: #424242;

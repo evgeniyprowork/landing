@@ -26,6 +26,13 @@
 	}
 
 	&--text-uppercase {
+		padding: 25px 40px;
+		font-size: 23px;
 		text-transform: uppercase;
+
+		@media (max-width: 700px) {
+			padding: 15px 30px;
+			font-size: 16px;
+		}
 	}
 }

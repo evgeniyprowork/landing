@@ -1,2 +1,19 @@
-footer
-	h2 Footer
+- var links = {'facebook-f': 'facebook.com', 'twitter': 'twitter.com', 'google-plus-g': 'google.com', 'linkedin-in': 'linkedin.com'}
+
+footer.footer
+	.container
+		.footer_header Get in touch
+		.footer_soc
+			each item, index in links
+				.footer_soc_link_w
+					a(href='https://' + item target='_blanc').footer_soc_link
+						i(class="footer_soc_i fab fa-" + index)
+		.footer_text.
+			Subscribe to our newsletter to stay update with what is new
+		.footer_form
+			form(method='POST' action='#')
+				.footer_form_fields
+					input(type='email' placeholder='Email Address').footer_input
+				button(type='submit').footer_btn.button Subscribe
+	.footer_copy.
+		Cssauthor.com &copy; 2014 All Rights Reserved

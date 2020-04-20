@@ -5,5 +5,10 @@ header.header
 	.container
 		.header_bottom
 			.logo: img(src='images/logo.png')
+
+			button.hamburger.hamburger--collapse(type='button')
+				span.hamburger-box
+					span.hamburger-inner
 			include nav
-			a.button.header_button.button--red() Free Consultation
+			//.btn_w
+			a.button.header_button.button--red(href="#") Free Consultation
